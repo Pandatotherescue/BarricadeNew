@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jakob\\Desktop\\BarricadeApp\\BarricadeNew\\BarricadeNew.csproj": {}
+    "C:\\Users\\jakob\\Desktop\\BarricadeNew\\BarricadeNew.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jakob\\Desktop\\BarricadeApp\\BarricadeNew\\BarricadeNew.csproj": {
+    "C:\\Users\\jakob\\Desktop\\BarricadeNew\\BarricadeNew.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jakob\\Desktop\\BarricadeApp\\BarricadeNew\\BarricadeNew.csproj",
+        "projectUniqueName": "C:\\Users\\jakob\\Desktop\\BarricadeNew\\BarricadeNew.csproj",
         "projectName": "BarricadeNew",
-        "projectPath": "C:\\Users\\jakob\\Desktop\\BarricadeApp\\BarricadeNew\\BarricadeNew.csproj",
+        "projectPath": "C:\\Users\\jakob\\Desktop\\BarricadeNew\\BarricadeNew.csproj",
         "packagesPath": "C:\\Users\\jakob\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jakob\\Desktop\\BarricadeApp\\BarricadeNew\\obj\\",
+        "outputPath": "C:\\Users\\jakob\\Desktop\\BarricadeNew\\obj\\",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [

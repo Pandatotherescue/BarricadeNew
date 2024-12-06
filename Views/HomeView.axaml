@@ -9,6 +9,23 @@
              x:DataType="vm:HomeViewModel"
              mc:Ignorable="d">
 
-    <Label Content="Home" />
+    <Border>
+        <Grid ColumnDefinitions="*,*" RowDefinitions="*,*">
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Content="HomeTest1" />
+            <Label Grid.Row="0"
+                   Grid.Column="1"
+                   Content="HomeTest2" />
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   Content="HomeTest3" />
+            <Label Grid.Row="1"
+                   Grid.Column="1"
+                   Content="HomeTest4" />
+
+        </Grid>
+    </Border>
+
 
 </UserControl>

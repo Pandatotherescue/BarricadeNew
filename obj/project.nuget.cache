@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rwzlp23O2pc=",
+  "dgSpecHash": "1fdavH/rosg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jakob\\Desktop\\BarricadeApp\\BarricadeNew\\BarricadeNew.csproj",
+  "projectFilePath": "C:\\Users\\jakob\\Desktop\\BarricadeNew\\BarricadeNew.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jakob\\.nuget\\packages\\avalonia\\11.1.0\\avalonia.11.1.0.nupkg.sha512",
     "C:\\Users\\jakob\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.22045.20230930\\avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",

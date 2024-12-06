@@ -9,6 +9,22 @@
              x:DataType="vm:GenerateViewModel"
              mc:Ignorable="d">
 
-    <Label Content="Generate" />
+    <Border>
+        <Grid ColumnDefinitions="*,*" RowDefinitions="*,*">
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Content="GenTest1" />
+            <Label Grid.Row="0"
+                   Grid.Column="1"
+                   Content="GenTest2" />
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   Content="GenTest3" />
+            <Label Grid.Row="1"
+                   Grid.Column="1"
+                   Content="GenTest4" />
+
+        </Grid>
+    </Border>
 
 </UserControl>
