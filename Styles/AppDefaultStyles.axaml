@@ -1,0 +1,46 @@
+﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <!--  Add elements for preview Here  -->
+    </Design.PreviewWith>
+
+    <!--  Set the default font for the window to Aptos  -->
+    <Style Selector="Window">
+        <Setter Property="FontFamily" Value="{DynamicResource Aptos}" />
+    </Style>
+
+    <!--  Set Icon package  -->
+    <Style Selector="Label.icon">
+        <Setter Property="FontFamily" Value="{DynamicResource Phosphor}" />
+        <Setter Property="Margin" Value="0,2,0,0" />
+    </Style>
+
+    <!--  Default button styling  -->
+    <Style Selector="Button">
+        <Setter Property="Background" Value="{DynamicResource PrimaryBtnColor}" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryBtnText}" />
+    </Style>
+
+    <Style Selector="Button /template/ ContentPresenter">
+        <Setter Property="RenderTransform" Value="scale(1)" />
+    </Style>
+    <!--  Button hover effects  -->
+    <Style Selector="Button:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource BtnHover}" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Foreground" Value="{DynamicResource BtnHoverText}" />
+        <Setter Property="RenderTransform" Value="scale(1.05)" />
+    </Style>
+
+    <Style Selector="Button.transparent">
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+
+    <Style Selector="Button.transparent:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+
+
+
+    <!--  Add Styles Here  -->
+</Styles>

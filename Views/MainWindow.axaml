@@ -1,0 +1,72 @@
+<Window x:Class="BarricadeNew.Views.MainWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:BarricadeNew.ViewModels"
+        d:DesignHeight="450"
+        d:DesignWidth="800"
+        x:DataType="vm:MainWindowViewModel"
+        mc:Ignorable="d">
+
+    <Design.DataContext>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <Grid Background="{DynamicResource PrimaryBackground}" ColumnDefinitions="Auto, *">
+
+        <Border Padding="10,0,0,10" Background="{DynamicResource SecondaryBackgroundGradient}">
+            <Grid RowDefinitions="*, Auto">
+                <StackPanel Spacing="12">
+                    <Image Width="175"
+                           Height="150"
+                           Source="{SvgImage /Assets/Images/Logo.svg}" />
+
+
+                    <Button HorizontalAlignment="Stretch"
+                            Command="{Binding GoToHomeCommand}"
+                            Foreground="{DynamicResource PrimaryBtnText}">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xE2C2;" />
+                            <Label Content="Home" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button HorizontalAlignment="Stretch"
+                            Command="{Binding GoToGenerateCommand}"
+                            Foreground="{DynamicResource PrimaryBtnText}">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xED4A;" />
+                            <Label Content="Generate" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button HorizontalAlignment="Stretch"
+                            Command="{Binding GoToVaultCommand}"
+                            Foreground="{DynamicResource PrimaryBtnText}">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xE76E;" />
+                            <Label Content="My Vault" />
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+
+                <Button Grid.Row="1"
+                        Classes="transparent"
+                        Command="{Binding GoToSettingsCommand}">
+                    <Label Classes="icon" Content="&#xE272;" />
+                </Button>
+
+            </Grid>
+        </Border>
+
+        <ContentControl Grid.Column="1" Content="{Binding CurrentView}" />
+
+    </Grid>
+
+</Window>

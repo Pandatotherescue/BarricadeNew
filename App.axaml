@@ -1,0 +1,36 @@
+<Application x:Class="BarricadeNew.App"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:BarricadeNew"
+             RequestedThemeVariant="Default">
+    <!--  "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options.  -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme />
+        <StyleInclude Source="Styles/AppDefaultStyles.axaml" />
+    </Application.Styles>
+
+    <Application.Resources>
+        <SolidColorBrush x:Key="PrimaryBackground">#1c1c1c</SolidColorBrush>
+        <SolidColorBrush x:Key="SecondaryBackground">#1a1a1a</SolidColorBrush>
+        <LinearGradientBrush x:Key="SecondaryBackgroundGradient" StartPoint="0%, 0%" EndPoint="100%,0%">
+            <GradientStop Offset="0" Color="#0f3e2d" />
+            <GradientStop Offset="1" Color="#1c1c1c" />
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="PrimaryTextColor">#009760</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryBtnColor">#009760</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryBtnText">#CFCFCF</SolidColorBrush>
+
+        <SolidColorBrush x:Key="BtnHover">#00aa6c</SolidColorBrush>
+        <SolidColorBrush x:Key="BtnHoverText">White</SolidColorBrush>
+
+        <FontFamily x:Key="Aptos">/Assets/Fonts/Aptos.ttf#Aptos</FontFamily>
+        <FontFamily x:Key="AptosBold">/Assets/Fonts/Aptos-Bold.ttf#Aptos</FontFamily>
+        <FontFamily x:Key="Phosphor">/Assets/Fonts/Phosphor.ttf#Phosphor</FontFamily>
+        <FontFamily x:Key="PhosphorFill">/Assets/Fonts/Phosphor-Fill.ttf#Phosphor-Fill</FontFamily>
+    </Application.Resources>
+</Application>
