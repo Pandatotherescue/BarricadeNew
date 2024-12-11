@@ -18,11 +18,19 @@ public class MainWindowViewModel : ViewModelBase
     public ReactiveCommand<Unit, ViewModelBase> GoToGenerateCommand { get; }
     public ReactiveCommand<Unit, ViewModelBase> GoToVaultCommand { get; }
     public ReactiveCommand<Unit, ViewModelBase> GoToSettingsCommand { get; }
+    
+    public ReactiveCommand<Unit, ViewModelBase> GoToLoginCommand { get; }
+    
+    public ReactiveCommand<Unit, ViewModelBase> GoToRegisterCommand { get; }
+    
+    
 
     private readonly HomeViewModel _homeViewModel = new();
     private readonly GenerateViewModel _generateViewModel = new();
-    private readonly GenerateViewModel _vaultViewModel = new();
-    private readonly GenerateViewModel _settingsViewModel = new();
+    private readonly VaultViewModel _vaultViewModel = new();
+    private readonly SettingsViewModel _settingsViewModel = new();
+    private readonly LoginViewModel _loginViewModel = new();
+    private readonly RegisterViewModel _registerViewModel = new();
 
     public MainWindowViewModel()
     {
@@ -35,6 +43,8 @@ public class MainWindowViewModel : ViewModelBase
         GoToGenerateCommand = ReactiveCommand.Create<ViewModelBase>(() => CurrentView = _generateViewModel);
         GoToVaultCommand = ReactiveCommand.Create<ViewModelBase>(() => CurrentView = _vaultViewModel);
         GoToSettingsCommand = ReactiveCommand.Create<ViewModelBase>(() => CurrentView = _settingsViewModel);
+        GoToLoginCommand = ReactiveCommand.Create<ViewModelBase>(() => CurrentView = _loginViewModel);
+        GoToRegisterCommand = ReactiveCommand.Create<ViewModelBase>(() => CurrentView = _registerViewModel);
     }
     
 }
