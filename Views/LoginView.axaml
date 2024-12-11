@@ -9,6 +9,6 @@
              x:DataType="vm:LoginViewModel"
              mc:Ignorable="d">
 
-    <Label Content="Login" />
+    <Border Padding="20" Background="{DynamicResource PrimaryBackground}" />
 
 </UserControl>
