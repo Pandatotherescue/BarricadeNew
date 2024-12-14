@@ -9,6 +9,65 @@
              x:DataType="vm:LoginViewModel"
              mc:Ignorable="d">
 
-    <Border Padding="20" Background="{DynamicResource PrimaryBackground}" />
+    <Border Padding="20" Background="{DynamicResource PrimaryBackground}">
+        <Grid ColumnDefinitions="*,500,*" RowDefinitions="*,*,*">
+            <StackPanel Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalAlignment="Center">
+                <Label HorizontalAlignment="Center"
+                       Content="Welcome to Barricade"
+                       FontSize="32"
+                       Foreground="{DynamicResource PrimaryBtnText}" />
+                <Label Content="Please sign in here or register if this is your first time here"
+                       FontSize="18"
+                       Foreground="{DynamicResource PrimaryBtnText}" />
+            </StackPanel>
+
+
+            <StackPanel Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="0,15,0,15"
+                        HorizontalAlignment="Center">
+
+                <Label Content="Username" Foreground="{DynamicResource PrimaryBtnText}" />
+
+                <TextBox x:Name="Username"
+                         Width="300"
+                         Height="40" />
+
+                <Label Content="Password" Foreground="{DynamicResource PrimaryBtnText}" />
+
+                <TextBox x:Name="Password"
+                         Width="300"
+                         Height="40" />
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="2"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
+                <Button Width="120"
+                        Margin="125,25,0,0"
+                        Foreground="{DynamicResource PrimaryBtnText}">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Classes="icon" Content="&#xE428;" />
+                        <Label Content="Login" />
+                    </StackPanel>
+                </Button>
+
+                <Button Width="120"
+                        Margin="15,25,0,0"
+                        Foreground="{DynamicResource PrimaryBtnText}">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Classes="icon" Content="&#xE4D0;" />
+                        <Label Content="Register" />
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+        </Grid>
+
+    </Border>
+
 
 </UserControl>

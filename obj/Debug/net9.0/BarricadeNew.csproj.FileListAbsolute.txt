@@ -155,3 +155,4 @@ C:\Users\jakob\Desktop\BarricadeNew\bin\Debug\net9.0\BarricadeNew.dll
 C:\Users\jakob\Desktop\BarricadeNew\bin\Debug\net9.0\BarricadeNew.pdb
 C:\Users\jakob\Desktop\BarricadeNew\obj\Debug\net9.0\BarricadeNew.genruntimeconfig.cache
 C:\Users\jakob\Desktop\BarricadeNew\obj\Debug\net9.0\ref\BarricadeNew.dll
+C:\Users\jakob\Desktop\BarricadeApp\BarricadeNew\obj\Debug\net9.0\BarricadeNew.sourcelink.json

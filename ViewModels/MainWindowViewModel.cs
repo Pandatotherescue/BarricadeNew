@@ -18,9 +18,7 @@ public class MainWindowViewModel : ViewModelBase
     public ReactiveCommand<Unit, ViewModelBase> GoToGenerateCommand { get; }
     public ReactiveCommand<Unit, ViewModelBase> GoToVaultCommand { get; }
     public ReactiveCommand<Unit, ViewModelBase> GoToSettingsCommand { get; }
-    
     public ReactiveCommand<Unit, ViewModelBase> GoToLoginCommand { get; }
-    
     public ReactiveCommand<Unit, ViewModelBase> GoToRegisterCommand { get; }
     
     
@@ -36,7 +34,7 @@ public class MainWindowViewModel : ViewModelBase
     {
         
         // Set initial view
-        CurrentView = _homeViewModel;
+        CurrentView = _loginViewModel;
 
         // Define commands
         GoToHomeCommand = ReactiveCommand.Create<ViewModelBase>(() => CurrentView = _homeViewModel);
