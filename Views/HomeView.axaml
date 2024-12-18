@@ -5,31 +5,60 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:BarricadeNew.ViewModels"
              d:DesignHeight="768"
-             d:DesignWidth="1024"
+             d:DesignWidth="1280"
              x:DataType="vm:HomeViewModel"
              mc:Ignorable="d">
 
-    <Border Padding="20"
+    <Border Padding="40,20,0,0"
             Background="{DynamicResource PrimaryBackground}"
             BorderBrush="{DynamicResource PrimaryBtnColor}">
-        <Grid ColumnDefinitions="800,*" RowDefinitions="*,700,*">
+        <Grid ColumnDefinitions="800,*" RowDefinitions="600,*">
 
-            <DataGrid Grid.Row="1"
+            <DataGrid Grid.Row="0"
                       Grid.Column="0"
                       HorizontalAlignment="Stretch"
+                      BorderBrush="{DynamicResource PrimaryBtnColor}"
+                      BorderThickness="1"
+                      IsReadOnly="True"
                       ItemsSource="{Binding Credentials}">
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Service}" Header="Service" />
-                    <DataGridTextColumn Binding="{Binding Username}" Header="Username" />
-                    <DataGridTextColumn Binding="{Binding Password}" Header="Password" />
+                    <DataGridTextColumn Width="*"
+                                        Binding="{Binding Service}"
+                                        FontSize="14"
+                                        FontWeight="Bold"
+                                        Foreground="{DynamicResource PrimaryTextColor}"
+                                        Header="Service" />
+                    <DataGridTextColumn Width="*"
+                                        Binding="{Binding Username}"
+                                        FontSize="14"
+                                        FontWeight="Bold"
+                                        Foreground="{DynamicResource PrimaryTextColor}"
+                                        Header="Username" />
+                    <DataGridTextColumn Width="*"
+                                        Binding="{Binding Password}"
+                                        FontSize="14"
+                                        FontWeight="Bold"
+                                        Foreground="{DynamicResource PrimaryTextColor}"
+                                        Header="Password" />
+                    <!--
+                    <DataGridTemplateColumn Header="Actions">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding DataContext.CopyCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                        CommandParameter="{Binding}"
+                                        Content="Copy" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>-->
                 </DataGrid.Columns>
             </DataGrid>
 
             <!--  Manually add entry to list  -->
-            <StackPanel Grid.Row="1"
-                        Grid.Column="2"
-                        Margin="25,0,0,0">
+            <StackPanel Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="40,0,0,0"
+                        HorizontalAlignment="Center">
 
                 <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
 
@@ -62,8 +91,8 @@
                          HorizontalAlignment="Left"
                          Text="{Binding Service}" />
 
-                <Label Content="E-mail" Foreground="{DynamicResource PrimaryTextColor}" />
-                <TextBox x:Name="Email"
+                <Label Content="Username" Foreground="{DynamicResource PrimaryTextColor}" />
+                <TextBox x:Name="Username"
                          Width="150"
                          Height="25"
                          Margin="0,0,0,5"

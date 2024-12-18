@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive;
@@ -46,6 +47,8 @@ public class HomeViewModel : ViewModelBase
 
         // Commands
         public ReactiveCommand<Unit, Unit> AddCredentialCommand { get; }
+        
+        public ReactiveCommand<Credential, Unit> CopyCommand { get; }
 
         // Constructor
         public HomeViewModel()
@@ -58,6 +61,18 @@ public class HomeViewModel : ViewModelBase
 
             // Define the AddCredentialCommand
             AddCredentialCommand = ReactiveCommand.Create(AddCredential);
+            
+            
+            /**
+            CopyCommand = ReactiveCommand.Create<Credential>(credential =>
+            {
+                if (credential != null)
+                {
+                    // Copy to clipboard
+                    Clipboard.SetText(credential.Password);
+                }
+            });
+            */
             
             GeneratePasswordCommand = ReactiveCommand.Create(() =>
             {
