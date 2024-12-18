@@ -4,19 +4,31 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:BarricadeNew.ViewModels"
-             d:DesignHeight="450"
-             d:DesignWidth="800"
+             d:DesignHeight="768"
+             d:DesignWidth="1024"
              x:DataType="vm:HomeViewModel"
              mc:Ignorable="d">
 
     <Border Padding="20"
             Background="{DynamicResource PrimaryBackground}"
             BorderBrush="{DynamicResource PrimaryBtnColor}">
-        <Grid ColumnDefinitions="200,500,*" RowDefinitions="*,500,*">
+        <Grid ColumnDefinitions="800,*" RowDefinitions="*,700,*">
+
+            <DataGrid Grid.Row="1"
+                      Grid.Column="0"
+                      HorizontalAlignment="Stretch"
+                      ItemsSource="{Binding Credentials}">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Service}" Header="Service" />
+                    <DataGridTextColumn Binding="{Binding Username}" Header="Username" />
+                    <DataGridTextColumn Binding="{Binding Password}" Header="Password" />
+                </DataGrid.Columns>
+            </DataGrid>
 
             <!--  Manually add entry to list  -->
             <StackPanel Grid.Row="1"
-                        Grid.Column="0"
+                        Grid.Column="2"
                         Margin="25,0,0,0">
 
                 <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
@@ -47,28 +59,51 @@
                          Width="150"
                          Height="25"
                          Margin="0,5,0,5"
-                         HorizontalAlignment="Left" />
+                         HorizontalAlignment="Left"
+                         Text="{Binding Service}" />
 
                 <Label Content="E-mail" Foreground="{DynamicResource PrimaryTextColor}" />
                 <TextBox x:Name="Email"
                          Width="150"
                          Height="25"
                          Margin="0,0,0,5"
-                         HorizontalAlignment="Left" />
+                         HorizontalAlignment="Left"
+                         Text="{Binding Username}" />
 
                 <Label Content="Password" Foreground="{DynamicResource PrimaryTextColor}" />
-                <TextBox x:Name="Password"
-                         Width="150"
-                         Height="25"
-                         Margin="0,0,0,5"
-                         HorizontalAlignment="Left" />
-            </StackPanel>
 
-            <DataGrid Grid.Row="1"
-                      Grid.Column="1"
-                      Margin="10"
-                      AutoGenerateColumns="True"
-                      ItemsSource="{}" />
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="Password"
+                             Width="150"
+                             Height="25"
+                             Margin="0,0,10,0"
+                             HorizontalAlignment="Left"
+                             Text="{Binding Password}" />
+                    <Button Width="80"
+                            Height="30"
+                            HorizontalContentAlignment="Center"
+                            Command="{Binding GeneratePasswordCommand}"
+                            Content="Generate"
+                            FontSize="14" />
+                </StackPanel>
+
+                <Button x:Name="BtnAddCredentials"
+                        Width="150"
+                        Height="50"
+                        Margin="0,15,0,0"
+                        Command="{Binding AddCredentialCommand}">
+
+
+                    <StackPanel HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Orientation="Horizontal">
+                        <Label Content="Add" Foreground="{DynamicResource PrimaryBtnText}" />
+                        <Label Classes="icon"
+                               Content="&#xE3D4;"
+                               Foreground="{DynamicResource PrimaryBtnText}" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
 
         </Grid>
     </Border>

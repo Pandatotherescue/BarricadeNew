@@ -45,7 +45,46 @@ namespace BarricadeNew;
             }
         }
 
-        // Example method to retrieve the database path (optional)
-        public static string GetDatabasePath() => DbPath;
+        // Insert a new credential into the database
+        public static void AddCredential(string service, string username, string password)
+        {
+            using var connection = new SqliteConnection($"Data Source={DbPath}");
+            connection.Open();
+
+            using var command = connection.CreateCommand();
+            command.CommandText = @"
+                INSERT INTO Credentials (Service, Username, Password)
+                VALUES (@service, @username, @password);
+            ";
+            command.Parameters.AddWithValue("@service", service);
+            command.Parameters.AddWithValue("@username", username);
+            command.Parameters.AddWithValue("@password", password);
+
+            command.ExecuteNonQuery();
+        }
+
+        // Retrieve all credentials from the database
+        public static List<(string Service, string Username, string Password)> GetAllCredentials()
+        {
+            List<(string Service, string Username, string Password)> credentials = new();
+
+            using var connection = new SqliteConnection($"Data Source={DbPath}");
+            connection.Open();
+
+            using var command = connection.CreateCommand();
+            command.CommandText = "SELECT Service, Username, Password FROM Credentials;";
+
+            using var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string service = reader.GetString(0);
+                string username = reader.GetString(1);
+                string password = reader.GetString(2);
+
+                credentials.Add((service, username, password));
+            }
+
+            return credentials;
+        }
     }
     
