@@ -9,20 +9,66 @@
              x:DataType="vm:HomeViewModel"
              mc:Ignorable="d">
 
-    <Border>
-        <Grid ColumnDefinitions="*,*" RowDefinitions="*,*">
-            <Label Grid.Row="0"
-                   Grid.Column="0"
-                   Content="HomeTest1" />
-            <Label Grid.Row="0"
-                   Grid.Column="1"
-                   Content="HomeTest2" />
-            <Label Grid.Row="1"
-                   Grid.Column="0"
-                   Content="HomeTest3" />
-            <Label Grid.Row="1"
-                   Grid.Column="1"
-                   Content="HomeTest4" />
+    <Border Padding="20"
+            Background="{DynamicResource PrimaryBackground}"
+            BorderBrush="{DynamicResource PrimaryBtnColor}">
+        <Grid ColumnDefinitions="200,500,*" RowDefinitions="*,500,*">
+
+            <!--  Manually add entry to list  -->
+            <StackPanel Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="25,0,0,0">
+
+                <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+
+                    <Label Margin="0,0,0,10"
+                           Content="Add to list"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           Foreground="{DynamicResource PrimaryTextColor}" />
+                    <Label Margin="10,0,0,10"
+                           Classes="icon"
+                           Content="&#xE4D0;"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           Foreground="{DynamicResource PrimaryTextColor}" />
+
+                </StackPanel>
+
+                <Rectangle Width="150"
+                           Height="2"
+                           Margin="0,0,0,10"
+                           HorizontalAlignment="Left"
+                           Fill="{DynamicResource PrimaryBtnColor}" />
+
+
+                <Label Content="Service" Foreground="{DynamicResource PrimaryTextColor}" />
+                <TextBox x:Name="Service"
+                         Width="150"
+                         Height="25"
+                         Margin="0,5,0,5"
+                         HorizontalAlignment="Left" />
+
+                <Label Content="E-mail" Foreground="{DynamicResource PrimaryTextColor}" />
+                <TextBox x:Name="Email"
+                         Width="150"
+                         Height="25"
+                         Margin="0,0,0,5"
+                         HorizontalAlignment="Left" />
+
+                <Label Content="Password" Foreground="{DynamicResource PrimaryTextColor}" />
+                <TextBox x:Name="Password"
+                         Width="150"
+                         Height="25"
+                         Margin="0,0,0,5"
+                         HorizontalAlignment="Left" />
+            </StackPanel>
+
+            <DataGrid Grid.Row="1"
+                      Grid.Column="1"
+                      Margin="10"
+                      AutoGenerateColumns="True"
+                      ItemsSource="{}" />
 
         </Grid>
     </Border>

@@ -26,6 +26,15 @@
                            Height="150"
                            Source="{SvgImage /Assets/Images/Logo.svg}" />
 
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Logged in as: "
+                               FontSize="12"
+                               Foreground="{DynamicResource PrimaryTextColor}" />
+                        <Label Content="User"
+                               FontSize="12"
+                               Foreground="{DynamicResource PrimaryBtnText}" />
+                    </StackPanel>
+
 
                     <Button HorizontalAlignment="Stretch"
                             Command="{Binding GoToHomeCommand}"

@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="BarricadeNew.Views.RegTwoFaView"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:BarricadeNew.ViewModels"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             x:DataType="vm:RegTwoFaViewModel"
+             mc:Ignorable="d">
+
+    <Border Padding="20" Background="{DynamicResource PrimaryBackground}">
+
+        <Grid ColumnDefinitions="*,500,*" RowDefinitions="*,*,*">
+
+            <StackPanel Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalAlignment="Center">
+                <Label HorizontalAlignment="Center"
+                       Content="Two-factor Authentication is required for this application"
+                       FontSize="16"
+                       Foreground="{DynamicResource PrimaryBtnText}" />
+                <Label HorizontalAlignment="Center"
+                       Content="Let's set it up!"
+                       FontSize="16"
+                       Foreground="{DynamicResource PrimaryBtnText}" />
+            </StackPanel>
+
+        </Grid>
+
+    </Border>
+
+</UserControl>

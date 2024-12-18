@@ -8,6 +8,15 @@
         <Setter Property="FontFamily" Value="{DynamicResource Aptos}" />
     </Style>
 
+    <!--  ListBox default  -->
+    <Style Selector="ListBox">
+        <Setter Property="Background" Value="{DynamicResource PrimaryBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryBtnText}" />
+        <Setter Property="Margin" Value="0,5,0,5" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+
     <!--  Set Icon package  -->
     <Style Selector="Label.icon">
         <Setter Property="FontFamily" Value="{DynamicResource Phosphor}" />

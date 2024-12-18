@@ -1,6 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using System.Reactive;
 using ReactiveUI;
+using Microsoft.Data.Sqlite;
+using System.Collections.Generic;
+
 
 namespace BarricadeNew.ViewModels;
 
@@ -34,7 +37,7 @@ public class MainWindowViewModel : ViewModelBase
     {
         
         // Set initial view
-        CurrentView = _loginViewModel;
+        CurrentView = _homeViewModel;
 
         // Define commands
         GoToHomeCommand = ReactiveCommand.Create<ViewModelBase>(() => CurrentView = _homeViewModel);
@@ -44,5 +47,7 @@ public class MainWindowViewModel : ViewModelBase
         GoToLoginCommand = ReactiveCommand.Create<ViewModelBase>(() => CurrentView = _loginViewModel);
         GoToRegisterCommand = ReactiveCommand.Create<ViewModelBase>(() => CurrentView = _registerViewModel);
     }
+
+    
     
 }

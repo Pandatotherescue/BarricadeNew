@@ -5,12 +5,15 @@
       <map>
         <entry key="App.axaml" value="BarricadeNew.csproj" />
         <entry key="Styles/AppDefaultStyles.axaml" value="BarricadeNew.csproj" />
+        <entry key="Views/2FAView.axaml" value="BarricadeNew.csproj" />
         <entry key="Views/GenerateView.axaml" value="BarricadeNew.csproj" />
         <entry key="Views/HomeView.axaml" value="BarricadeNew.csproj" />
         <entry key="Views/LoginView.axaml" value="BarricadeNew.csproj" />
         <entry key="Views/MainSingleView.axaml" value="BarricadeNew.csproj" />
         <entry key="Views/MainView.axaml" value="BarricadeNew.csproj" />
         <entry key="Views/MainWindow.axaml" value="BarricadeNew.csproj" />
+        <entry key="Views/RegTwoFaView.axaml" value="BarricadeNew.csproj" />
+        <entry key="Views/RegisterView.axaml" value="BarricadeNew.csproj" />
         <entry key="Views/SettingsView.axaml" value="BarricadeNew.csproj" />
         <entry key="Views/VaultView.axaml" value="BarricadeNew.csproj" />
       </map>

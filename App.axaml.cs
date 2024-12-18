@@ -12,6 +12,7 @@ public partial class App : Application
     {
         AvaloniaXamlLoader.Load(this);
         DataTemplates.Add(new ViewLocator());
+        DataAccess.InitializeDatabase();
     }
 
     public override void OnFrameworkInitializationCompleted()
