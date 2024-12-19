@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BarricadeNew")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13220ddcb6fa9d5ad4193bcb42cea089fe376e72")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1366d4e3001478f9a322f54b18ab8197ecbcfff3")]
 [assembly: System.Reflection.AssemblyProductAttribute("BarricadeNew")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BarricadeNew")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

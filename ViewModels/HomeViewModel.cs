@@ -1,17 +1,21 @@
 ﻿using System;
 using System.Windows;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Reactive;
 using System.Threading.Tasks;
+using Avalonia;
 using Avalonia.Controls;
 using BarricadeNew.Models;
 using ReactiveUI;
+using TextCopy;
 
 namespace BarricadeNew.ViewModels;
 
 public class HomeViewModel : ViewModelBase
 {
+
     // Collection to bind to the DataGrid
         private ObservableCollection<CredentialViewModel> _credentials;
         public ObservableCollection<CredentialViewModel> Credentials
@@ -19,7 +23,6 @@ public class HomeViewModel : ViewModelBase
             get => _credentials;
             set => this.RaiseAndSetIfChanged(ref _credentials, value);
         }
-        
         
         public ReactiveCommand<Unit, Unit> GeneratePasswordCommand { get; }
 
@@ -30,7 +33,7 @@ public class HomeViewModel : ViewModelBase
             get => _service;
             set => this.RaiseAndSetIfChanged(ref _service, value);
         }
-
+        
         private string _username;
         public string Username
         {
@@ -48,8 +51,6 @@ public class HomeViewModel : ViewModelBase
         // Commands
         public ReactiveCommand<Unit, Unit> AddCredentialCommand { get; }
         
-        public ReactiveCommand<Credential, Unit> CopyCommand { get; }
-
         // Constructor
         public HomeViewModel()
         {
@@ -61,18 +62,6 @@ public class HomeViewModel : ViewModelBase
 
             // Define the AddCredentialCommand
             AddCredentialCommand = ReactiveCommand.Create(AddCredential);
-            
-            
-            /**
-            CopyCommand = ReactiveCommand.Create<Credential>(credential =>
-            {
-                if (credential != null)
-                {
-                    // Copy to clipboard
-                    Clipboard.SetText(credential.Password);
-                }
-            });
-            */
             
             GeneratePasswordCommand = ReactiveCommand.Create(() =>
             {

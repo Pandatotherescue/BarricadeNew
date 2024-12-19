@@ -9,13 +9,28 @@
              x:DataType="vm:HomeViewModel"
              mc:Ignorable="d">
 
-    <Border Padding="40,20,0,0"
+    <Border Padding="60,20,0,0"
             Background="{DynamicResource PrimaryBackground}"
             BorderBrush="{DynamicResource PrimaryBtnColor}">
-        <Grid ColumnDefinitions="800,*" RowDefinitions="600,*">
+        <Grid ColumnDefinitions="800,*" RowDefinitions="*,600,*">
 
-            <DataGrid Grid.Row="0"
+            <StackPanel Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="0,0,0,35"
+                        HorizontalAlignment="Center">
+                <Label Content="Welcome to your personal BARRICADE Vault"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       Foreground="{DynamicResource PrimaryTextColor}" />
+                <Label Content="Here you can see your saved passwords, as well as add new entries to your personal list"
+                       FontSize="16"
+                       FontWeight="Bold"
+                       Foreground="{DynamicResource PrimaryTextColor}" />
+            </StackPanel>
+
+            <DataGrid Grid.Row="1"
                       Grid.Column="0"
+                      Padding="20"
                       HorizontalAlignment="Stretch"
                       BorderBrush="{DynamicResource PrimaryBtnColor}"
                       BorderThickness="1"
@@ -41,21 +56,24 @@
                                         FontWeight="Bold"
                                         Foreground="{DynamicResource PrimaryTextColor}"
                                         Header="Password" />
-                    <!--
-                    <DataGridTemplateColumn Header="Actions">
+
+                    <DataGridTemplateColumn Header="WIP">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Command="{Binding DataContext.CopyCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
-                                        CommandParameter="{Binding}"
-                                        Content="Copy" />
+                                <Button Width="75"
+                                        Height="30"
+                                        HorizontalContentAlignment="Center"
+                                        VerticalContentAlignment="Center"
+                                        Content="Copy"
+                                        FontSize="12" />
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>-->
+                    </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
 
             <!--  Manually add entry to list  -->
-            <StackPanel Grid.Row="0"
+            <StackPanel Grid.Row="1"
                         Grid.Column="1"
                         Margin="40,0,0,0"
                         HorizontalAlignment="Center">
@@ -76,7 +94,7 @@
 
                 </StackPanel>
 
-                <Rectangle Width="150"
+                <Rectangle Width="300"
                            Height="2"
                            Margin="0,0,0,10"
                            HorizontalAlignment="Left"
@@ -85,7 +103,7 @@
 
                 <Label Content="Service" Foreground="{DynamicResource PrimaryTextColor}" />
                 <TextBox x:Name="Service"
-                         Width="150"
+                         Width="220"
                          Height="25"
                          Margin="0,5,0,5"
                          HorizontalAlignment="Left"
@@ -93,7 +111,7 @@
 
                 <Label Content="Username" Foreground="{DynamicResource PrimaryTextColor}" />
                 <TextBox x:Name="Username"
-                         Width="150"
+                         Width="220"
                          Height="25"
                          Margin="0,0,0,5"
                          HorizontalAlignment="Left"
@@ -103,7 +121,7 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="Password"
-                             Width="150"
+                             Width="220"
                              Height="25"
                              Margin="0,0,10,0"
                              HorizontalAlignment="Left"

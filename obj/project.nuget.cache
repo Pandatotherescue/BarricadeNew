@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "r/kOxUKYAw0=",
+  "dgSpecHash": "zUfMMS/nBIo=",
   "success": true,
   "projectFilePath": "C:\\Users\\jakob\\Desktop\\BarricadeNew\\BarricadeNew.csproj",
   "expectedPackageFiles": [
@@ -70,6 +70,7 @@
     "C:\\Users\\jakob\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\jakob\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
     "C:\\Users\\jakob\\.nuget\\packages\\system.text.json\\9.0.0\\system.text.json.9.0.0.nupkg.sha512",
+    "C:\\Users\\jakob\\.nuget\\packages\\textcopy\\6.2.1\\textcopy.6.2.1.nupkg.sha512",
     "C:\\Users\\jakob\\.nuget\\packages\\tmds.dbus.protocol\\0.16.0\\tmds.dbus.protocol.0.16.0.nupkg.sha512"
   ],
   "logs": []

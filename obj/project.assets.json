@@ -1241,6 +1241,22 @@
           "buildTransitive/net8.0/System.Text.Json.targets": {}
         }
       },
+      "TextCopy/6.2.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/TextCopy.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/TextCopy.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Tmds.DBus.Protocol/0.16.0": {
         "type": "package",
         "dependencies": {
@@ -3055,6 +3071,30 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "TextCopy/6.2.1": {
+      "sha512": "ryejViUBmHQ2XMie2AiRBn7KVKu2Gh/hqrctGSAUf1BufwfPjr+MWuACNBaiG+40TMbWRDJZgV73Tpl9hggeRw==",
+      "type": "package",
+      "path": "textcopy/6.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/monoandroid90/TextCopy.dll",
+        "lib/monoandroid90/TextCopy.xml",
+        "lib/net462/TextCopy.dll",
+        "lib/net462/TextCopy.xml",
+        "lib/net6.0/TextCopy.dll",
+        "lib/net6.0/TextCopy.xml",
+        "lib/netstandard2.0/TextCopy.dll",
+        "lib/netstandard2.0/TextCopy.xml",
+        "lib/netstandard2.1/TextCopy.dll",
+        "lib/netstandard2.1/TextCopy.xml",
+        "lib/xamarinios10/TextCopy.dll",
+        "lib/xamarinios10/TextCopy.xml",
+        "textcopy.6.2.1.nupkg.sha512",
+        "textcopy.nuspec"
+      ]
+    },
     "Tmds.DBus.Protocol/0.16.0": {
       "sha512": "9Ne9AvrRWrDQvzbMcbTz3EaGRE1vQmkeeu0Xp7Ii0Wdlhwfjst8FDRas+RBslU5kdPWs2aeMLErzyT1DwH9zeA==",
       "type": "package",
@@ -3083,7 +3123,8 @@
       "Dapper >= 2.1.35",
       "Microsoft.Data.Sqlite.Core >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.0",
-      "SQLite >= 3.13.0"
+      "SQLite >= 3.13.0",
+      "TextCopy >= 6.2.1"
     ]
   },
   "packageFolders": {
@@ -3099,7 +3140,6 @@
       "packagesPath": "C:\\Users\\jakob\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\jakob\\Desktop\\BarricadeNew\\obj\\",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
@@ -3130,7 +3170,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "all"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -3183,6 +3224,10 @@
           "SQLite": {
             "target": "Package",
             "version": "[3.13.0, )"
+          },
+          "TextCopy": {
+            "target": "Package",
+            "version": "[6.2.1, )"
           }
         },
         "imports": [

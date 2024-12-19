@@ -36,7 +36,6 @@
     <!--  Button hover effects  -->
     <Style Selector="Button:pointerover /template/ ContentPresenter">
         <Setter Property="Background" Value="{DynamicResource BtnHover}" />
-        <Setter Property="FontSize" Value="18" />
         <Setter Property="Foreground" Value="{DynamicResource BtnHoverText}" />
         <Setter Property="RenderTransform" Value="scale(1.05)" />
     </Style>
