@@ -40,6 +40,7 @@
                 <Button Width="120"
                         Margin="15,40,0,0"
                         HorizontalAlignment="Center"
+                        Command="{Binding}"
                         Foreground="{DynamicResource PrimaryBtnText}">
                     <StackPanel Orientation="Horizontal">
                         <Label Classes="icon" Content="&#xE4D0;" />

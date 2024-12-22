@@ -49,6 +49,7 @@
                         Orientation="Horizontal">
                 <Button Width="120"
                         Margin="125,25,0,0"
+                        Command="{Binding LoginCommand}"
                         Foreground="{DynamicResource PrimaryBtnText}">
                     <StackPanel Orientation="Horizontal">
                         <Label Classes="icon" Content="&#xE428;" />
@@ -58,6 +59,7 @@
 
                 <Button Width="120"
                         Margin="15,25,0,0"
+                        Command="{Binding RegisterCommand}"
                         Foreground="{DynamicResource PrimaryBtnText}">
                     <StackPanel Orientation="Horizontal">
                         <Label Classes="icon" Content="&#xE4D0;" />
