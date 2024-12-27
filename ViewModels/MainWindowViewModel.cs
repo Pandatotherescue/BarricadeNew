@@ -37,7 +37,7 @@ public class MainWindowViewModel : ViewModelBase
     {
         
         // Set initial view
-        CurrentView = _homeViewModel;
+        CurrentView = _loginViewModel;
 
         // Define commands
         GoToHomeCommand = ReactiveCommand.Create<ViewModelBase>(() => CurrentView = _homeViewModel);
