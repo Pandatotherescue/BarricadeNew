@@ -46,20 +46,20 @@
                     </Button>
 
                     <Button HorizontalAlignment="Stretch"
-                            Command="{Binding GoToGenerateCommand}"
-                            Foreground="{DynamicResource PrimaryBtnText}">
-                        <StackPanel Orientation="Horizontal">
-                            <Label Classes="icon" Content="&#xED4A;" />
-                            <Label Content="Generate" />
-                        </StackPanel>
-                    </Button>
-
-                    <Button HorizontalAlignment="Stretch"
                             Command="{Binding GoToVaultCommand}"
                             Foreground="{DynamicResource PrimaryBtnText}">
                         <StackPanel Orientation="Horizontal">
                             <Label Classes="icon" Content="&#xE76E;" />
                             <Label Content="My Vault" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button HorizontalAlignment="Stretch"
+                            Command="{Binding GoToGenerateCommand}"
+                            Foreground="{DynamicResource PrimaryBtnText}">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Classes="icon" Content="&#xE278;" />
+                            <Label Content="Upcoming Feature" />
                         </StackPanel>
                     </Button>
 

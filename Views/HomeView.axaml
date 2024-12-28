@@ -9,149 +9,16 @@
              x:DataType="vm:HomeViewModel"
              mc:Ignorable="d">
 
-    <Border Padding="60,20,0,0"
-            Background="{DynamicResource PrimaryBackground}"
-            BorderBrush="{DynamicResource PrimaryBtnColor}">
-        <Grid ColumnDefinitions="800,*" RowDefinitions="*,600,*">
-
-            <StackPanel Grid.Row="0"
-                        Grid.Column="0"
-                        Margin="0,0,0,35"
-                        HorizontalAlignment="Center">
-                <Label Content="Welcome to your personal BARRICADE Vault"
-                       FontSize="22"
-                       FontWeight="Bold"
-                       Foreground="{DynamicResource PrimaryTextColor}" />
-                <Label Content="Here you can see your saved passwords, as well as add new entries to your personal list"
-                       FontSize="16"
-                       FontWeight="Bold"
-                       Foreground="{DynamicResource PrimaryTextColor}" />
+    <Border Padding="20" Background="{DynamicResource PrimaryBackground}">
+        <Grid HorizontalAlignment="Center"
+              ColumnDefinitions="*"
+              RowDefinitions="*">
+            <StackPanel Orientation="Horizontal">
+                <Label Classes="icon"
+                       Content="&#xE40C;"
+                       FontSize="24" />
+                <Label Content="Welcome to Barricade - Your locally encrypted Password Manager" FontSize="24" />
             </StackPanel>
-
-            <DataGrid Grid.Row="1"
-                      Grid.Column="0"
-                      Padding="20"
-                      HorizontalAlignment="Stretch"
-                      BorderBrush="{DynamicResource PrimaryBtnColor}"
-                      BorderThickness="1"
-                      IsReadOnly="True"
-                      ItemsSource="{Binding Credentials}">
-
-                <DataGrid.Columns>
-                    <DataGridTextColumn Width="*"
-                                        Binding="{Binding Service}"
-                                        FontSize="14"
-                                        FontWeight="Bold"
-                                        Foreground="{DynamicResource PrimaryTextColor}"
-                                        Header="Service" />
-                    <DataGridTextColumn Width="*"
-                                        Binding="{Binding Username}"
-                                        FontSize="14"
-                                        FontWeight="Bold"
-                                        Foreground="{DynamicResource PrimaryTextColor}"
-                                        Header="Username" />
-                    <DataGridTextColumn Width="*"
-                                        Binding="{Binding Password}"
-                                        FontSize="14"
-                                        FontWeight="Bold"
-                                        Foreground="{DynamicResource PrimaryTextColor}"
-                                        Header="Password" />
-
-                    <DataGridTemplateColumn Header="WIP">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Width="75"
-                                        Height="30"
-                                        HorizontalContentAlignment="Center"
-                                        VerticalContentAlignment="Center"
-                                        Content="Copy"
-                                        FontSize="12" />
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
-
-            <!--  Manually add entry to list  -->
-            <StackPanel Grid.Row="1"
-                        Grid.Column="1"
-                        Margin="40,0,0,0"
-                        HorizontalAlignment="Center">
-
-                <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-
-                    <Label Margin="0,0,0,10"
-                           Content="Add to list"
-                           FontSize="18"
-                           FontWeight="Bold"
-                           Foreground="{DynamicResource PrimaryTextColor}" />
-                    <Label Margin="10,0,0,10"
-                           Classes="icon"
-                           Content="&#xE4D0;"
-                           FontSize="24"
-                           FontWeight="Bold"
-                           Foreground="{DynamicResource PrimaryTextColor}" />
-
-                </StackPanel>
-
-                <Rectangle Width="300"
-                           Height="2"
-                           Margin="0,0,0,10"
-                           HorizontalAlignment="Left"
-                           Fill="{DynamicResource PrimaryBtnColor}" />
-
-
-                <Label Content="Service" Foreground="{DynamicResource PrimaryTextColor}" />
-                <TextBox x:Name="Service"
-                         Width="220"
-                         Height="25"
-                         Margin="0,5,0,5"
-                         HorizontalAlignment="Left"
-                         Text="{Binding Service}" />
-
-                <Label Content="Username" Foreground="{DynamicResource PrimaryTextColor}" />
-                <TextBox x:Name="Username"
-                         Width="220"
-                         Height="25"
-                         Margin="0,0,0,5"
-                         HorizontalAlignment="Left"
-                         Text="{Binding Username}" />
-
-                <Label Content="Password" Foreground="{DynamicResource PrimaryTextColor}" />
-
-                <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="Password"
-                             Width="220"
-                             Height="25"
-                             Margin="0,0,10,0"
-                             HorizontalAlignment="Left"
-                             Text="{Binding Password}" />
-                    <Button Width="80"
-                            Height="30"
-                            HorizontalContentAlignment="Center"
-                            Command="{Binding GeneratePasswordCommand}"
-                            Content="Generate"
-                            FontSize="14" />
-                </StackPanel>
-
-                <Button x:Name="BtnAddCredentials"
-                        Width="150"
-                        Height="50"
-                        Margin="0,15,0,0"
-                        Command="{Binding AddCredentialCommand}">
-
-
-                    <StackPanel HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Orientation="Horizontal">
-                        <Label Content="Add" Foreground="{DynamicResource PrimaryBtnText}" />
-                        <Label Classes="icon"
-                               Content="&#xE3D4;"
-                               Foreground="{DynamicResource PrimaryBtnText}" />
-                    </StackPanel>
-                </Button>
-            </StackPanel>
-
         </Grid>
     </Border>
 
