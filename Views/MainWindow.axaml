@@ -65,11 +65,20 @@
 
                 </StackPanel>
 
-                <Button Grid.Row="1"
-                        Classes="transparent"
-                        Command="{Binding GoToSettingsCommand}">
-                    <Label Classes="icon" Content="&#xE272;" />
-                </Button>
+
+                <StackPanel Grid.Row="1">
+                    <Button Classes="transparent" Command="{Binding GoToSettingsCommand}">
+                        <Label Classes="icon" Content="&#xE272;" />
+                    </Button>
+                    <Label HorizontalAlignment="Center"
+                           Content="Powered by: AES-256 encryption technology"
+                           FontSize="11"
+                           Foreground="{DynamicResource PrimaryTextColor}" />
+                    <Label HorizontalAlignment="Center"
+                           Content="licensed under creative commons"
+                           FontSize="11"
+                           Foreground="{DynamicResource PrimaryBtnText}" />
+                </StackPanel>
 
             </Grid>
         </Border>

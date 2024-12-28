@@ -11,13 +11,66 @@
 
     <Border Padding="20" Background="{DynamicResource PrimaryBackground}">
         <Grid HorizontalAlignment="Center"
-              ColumnDefinitions="*"
-              RowDefinitions="*">
-            <StackPanel Orientation="Horizontal">
+              ColumnDefinitions="*,Auto,*"
+              RowDefinitions="Auto,*">
+
+            <StackPanel Grid.Row="0"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
                 <Label Classes="icon"
                        Content="&#xE40C;"
                        FontSize="24" />
                 <Label Content="Welcome to Barricade - Your locally encrypted Password Manager" FontSize="24" />
+                <Label Classes="icon"
+                       Content="&#xE40C;"
+                       FontSize="24" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="1">
+
+                <StackPanel HorizontalAlignment="Center">
+
+                    <StackPanel Margin="0,100,0,0">
+                        <Label HorizontalContentAlignment="Center"
+                               Content="We take your password"
+                               FontSize="20"
+                               Foreground="{DynamicResource PrimaryTextColor}" />
+                        <Label HorizontalContentAlignment="Center"
+                               Classes="icon"
+                               Content="&#xE524;"
+                               FontSize="18" />
+                        <Label HorizontalContentAlignment="Center"
+                               Content="Encrypt it with AES-256"
+                               FontSize="20"
+                               Foreground="{DynamicResource PrimaryTextColor}" />
+                        <Label HorizontalContentAlignment="Center"
+                               Classes="icon"
+                               Content="&#xE524;"
+                               FontSize="18" />
+                        <Label HorizontalContentAlignment="Center"
+                               Content="Magic happens"
+                               FontSize="20"
+                               Foreground="{DynamicResource PrimaryTextColor}" />
+                        <Label HorizontalContentAlignment="Center"
+                               Classes="icon"
+                               Content="&#xE524;"
+                               FontSize="18" />
+                        <Label HorizontalContentAlignment="Center"
+                               Content="Now your sensitive information is SECURE"
+                               FontSize="20"
+                               Foreground="{DynamicResource PrimaryTextColor}" />
+
+                        <Label Margin="0,100,0,0"
+                               HorizontalContentAlignment="Center"
+                               Content="So secure in fact, that it would take the fastest computer in the world"
+                               FontSize="20" />
+                        <Label HorizontalContentAlignment="Center"
+                               Content="2,84 billion years to crack your password!"
+                               FontSize="24" />
+                    </StackPanel>
+
+                </StackPanel>
+
             </StackPanel>
         </Grid>
     </Border>

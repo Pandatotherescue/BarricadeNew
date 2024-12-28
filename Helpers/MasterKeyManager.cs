@@ -58,5 +58,6 @@ public static class MasterKeyManager
             Directory.CreateDirectory(folderPath!);
 
         File.WriteAllBytes(KeyFilePath, key);
+        Console.WriteLine(key.Length);
     }
 }
