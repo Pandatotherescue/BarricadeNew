@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="using:BarricadeNew.ViewModels"
+        Title="Barricade© v.1.0.0-2025"
         d:DesignHeight="450"
         d:DesignWidth="800"
         x:DataType="vm:MainWindowViewModel"
@@ -30,7 +31,7 @@
                         <Label Content="Logged in as: "
                                FontSize="12"
                                Foreground="{DynamicResource PrimaryTextColor}" />
-                        <Label Content="User"
+                        <Label Content="Jakob Persson"
                                FontSize="12"
                                Foreground="{DynamicResource PrimaryBtnText}" />
                     </StackPanel>

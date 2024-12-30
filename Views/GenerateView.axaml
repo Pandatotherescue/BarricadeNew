@@ -9,20 +9,74 @@
              x:DataType="vm:GenerateViewModel"
              mc:Ignorable="d">
 
-    <Border>
-        <Grid ColumnDefinitions="*,*" RowDefinitions="*,*">
-            <Label Grid.Row="0"
-                   Grid.Column="0"
-                   Content="GenTest1" />
-            <Label Grid.Row="0"
-                   Grid.Column="1"
-                   Content="GenTest2" />
-            <Label Grid.Row="1"
-                   Grid.Column="0"
-                   Content="GenTest3" />
-            <Label Grid.Row="1"
-                   Grid.Column="1"
-                   Content="GenTest4" />
+    <Border Padding="35">
+        <Grid HorizontalAlignment="Center"
+              ColumnDefinitions="*,Auto,*"
+              RowDefinitions="*">
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+                <Label Margin="0,0,0,50"
+                       Content="We are currently working on the following features"
+                       FontSize="26" />
+
+                <StackPanel Margin="15"
+                            HorizontalAlignment="Left"
+                            Orientation="Horizontal">
+                    <Label Classes="icon"
+                           Content="&#xE00A;"
+                           Foreground="{DynamicResource PrimaryTextColor}" />
+
+                    <Label Margin="0,0,40,0"
+                           Content="Anti-Phishing Protection"
+                           FontWeight="Bold"
+                           Foreground="{DynamicResource PrimaryBtnText}" />
+
+                    <Label Margin="0,0,40,0"
+                           Classes="icon"
+                           Content="&#xE02E;"
+                           Foreground="{DynamicResource PrimaryTextColor}" />
+
+                    <Label Content="Scan suspicious links and check if they could be harmful" Foreground="{DynamicResource PrimaryBtnText}" />
+                </StackPanel>
+                <StackPanel Margin="15"
+                            HorizontalAlignment="Left"
+                            Orientation="Horizontal">
+                    <Label Classes="icon"
+                           Content="&#xE00A;"
+                           Foreground="{DynamicResource PrimaryTextColor}" />
+
+                    <Label Margin="0,0,40,0"
+                           Content="Better functionality "
+                           FontWeight="Bold"
+                           Foreground="{DynamicResource PrimaryBtnText}" />
+
+                    <Label Margin="0,0,40,0"
+                           Classes="icon"
+                           Content="&#xE02E;"
+                           Foreground="{DynamicResource PrimaryTextColor}" />
+
+                    <Label Content="More features including, alerts when it's time to update your passwords" Foreground="{DynamicResource PrimaryBtnText}" />
+                </StackPanel>
+                <StackPanel Margin="15"
+                            HorizontalAlignment="Left"
+                            Orientation="Horizontal">
+                    <Label Classes="icon"
+                           Content="&#xE00A;"
+                           Foreground="{DynamicResource PrimaryTextColor}" />
+
+                    <Label Margin="0,0,40,0"
+                           Content="Leaked credential watch"
+                           FontWeight="Bold"
+                           Foreground="{DynamicResource PrimaryBtnText}" />
+
+                    <Label Margin="0,0,40,0"
+                           Classes="icon"
+                           Content="&#xE02E;"
+                           Foreground="{DynamicResource PrimaryTextColor}" />
+
+                    <Label Content="We scan the dark web for your credentials and notify you if compromised" Foreground="{DynamicResource PrimaryBtnText}" />
+                </StackPanel>
+
+            </StackPanel>
 
         </Grid>
     </Border>

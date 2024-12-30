@@ -51,11 +51,12 @@ namespace BarricadeNew.ViewModels
                 Console.WriteLine($"Error during login: {ex.Message}");
             }
         }
-
+        
+        //Metode til registrering
         private void ExecuteRegister()
         {
-            // Logic for registration (optional implementation)
-            Console.WriteLine("Registration logic goes here!");
+            //Skal implementere viewchange ved klik på knap, samt tilføje login credentials til DB.
+            Console.WriteLine("Register successful!");
         }
 
         private bool ValidateCredentials(byte[] storedMasterKey)

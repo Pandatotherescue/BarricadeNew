@@ -57,15 +57,32 @@
                                         Foreground="{DynamicResource PrimaryTextColor}"
                                         Header="Password" />
 
-                    <DataGridTemplateColumn Header="WIP">
+                    <DataGridTemplateColumn Header="Work in Progress">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Width="75"
-                                        Height="30"
-                                        HorizontalContentAlignment="Center"
-                                        VerticalContentAlignment="Center"
-                                        Content="Copy"
-                                        FontSize="12" />
+                                <StackPanel Orientation="Horizontal">
+                                    <Button Width="75"
+                                            Height="30"
+                                            Margin="3"
+                                            HorizontalContentAlignment="Center"
+                                            VerticalContentAlignment="Center"
+                                            Content="Copy"
+                                            FontSize="12" />
+                                    <Button Width="75"
+                                            Height="30"
+                                            Margin="3"
+                                            HorizontalContentAlignment="Center"
+                                            VerticalContentAlignment="Center"
+                                            Content="Edit"
+                                            FontSize="12" />
+                                    <Button Width="75"
+                                            Height="30"
+                                            Margin="3"
+                                            HorizontalContentAlignment="Center"
+                                            VerticalContentAlignment="Center"
+                                            Content="Delete"
+                                            FontSize="12" />
+                                </StackPanel>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>

@@ -21,6 +21,11 @@
                 <Label Content="Please sign in here or register if this is your first time here"
                        FontSize="18"
                        Foreground="{DynamicResource PrimaryBtnText}" />
+
+                <Label Margin="0,30,0,0"
+                       Content="Login currently disabled - Please click home in the left menu "
+                       FontSize="18"
+                       Foreground="{DynamicResource PrimaryTextColor}" />
             </StackPanel>
 
 
